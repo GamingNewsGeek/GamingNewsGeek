@@ -1,5 +1,6 @@
 body {
     background: linear-gradient(135deg, gainsboro 50%, #4c38bb 50%);
+    background-attachment: fixed;
     margin: 0; /* Assurer que le background couvre tout l'écran */
     height: 100vh; /* Assurer que le background couvre toute la hauteur de la fenêtre */
 
