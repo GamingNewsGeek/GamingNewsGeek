@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bientôt disponible</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <h3>Le site sera déployé dans</h3>
+        <div id="timer"></div>
+    </div>
+    <script>
+        const targetDate = Date.parse("2025-07-21T08:00:00.000Z");
+
+        function updateTimer() {
+            const now = new Date().getTime();
+            const timeRemaining = targetDate - now;
+
+            if (timeRemaining >= 0) {
+                const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+                document.getElementById("timer").innerHTML = 
+                    `
+                    <div class="page-wrapper__timer">
+                        <div class="page-wrapper__days">
+                            ${days}
+                        </div>
+                        <div class="page-wrapper__hours">
+                            ${hours}
+                        </div>
+                        <div class="page-wrapper__minutes">
+                            ${minutes}
+                        </div>
+                        <div class="page-wrapper__seconds">
+                            ${seconds}
+                        </div>
+                    </div>
+                    `
+            } else {
+                document.getElementById("timer").innerHTML = "Le site est sur le point d'être déployé";
+            }
+        }
+
+        // Mettre à jour le timer toutes les secondes
+        setInterval(updateTimer, 1000);
+
+        // Initialiser le timer immédiatement
+        updateTimer();
+    </script>
+</body>
+</html>
