@@ -1,6 +1,6 @@
 # GamingNewsGeek
 
-### Qu'est-ce que GamingNewsGeek ?
+### Qu'est-ce que [GamingNewsGeek](https://gamingnewsgeek.github.io/GamingNewsGeek/) ?
 GamingNewsGeek est un site d'actualité dédié au monde du gaming. Que vous soyez un joueur occasionnel ou un passionné de jeux vidéo, GamingNewsGeek vous propose les dernières nouvelles, des critiques approfondies, et bien plus encore.
 
 ### Fonctionnalités Principales
